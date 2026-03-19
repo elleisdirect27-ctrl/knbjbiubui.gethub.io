@@ -329,7 +329,6 @@
             cursor: pointer;
         }
 
-        /* Стили для диплома (бумажный вид, центрирование) */
         #diploma-screen h2 {
             text-align: center;
             border-bottom: none;
@@ -369,25 +368,17 @@
             border-radius: 20px;
         }
 
+        /* Убрана подложка, оставлен только жирный синий текст */
         .diploma-name {
-            font-size: 1em;
             font-weight: 800;
             color: #1e3a5f;
-            background: linear-gradient(145deg, #dae9f9, #dae9f9);
-            padding: 0 15px;
-            border-radius: 40px;
             display: inline-block;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             margin: 5px 0;
         }
 
         .diploma-specialization {
             font-weight: 700;
             color: #1e3a5f;
-            background: #dae9f9;
-            padding: 4px 20px;
-            border-radius: 40px;
-            border: 1px solid #dae9f9;
             display: inline-block;
             margin: 10px 0;
         }
@@ -401,147 +392,154 @@
         }
 
         #submit-answer {
-        background: #1e3a5f; 
-        border-color: #1e3a5f;
+            background: #1e3a5f; 
+            border-color: #1e3a5f;
         }
 
         #submit-answer:hover {
-        background: #1e3a5f;
+            background: #1e3a5f;
         }
 
         #back-to-main-from-section,
         #back-to-main-from-diploma,
         #back-to-main-from-final {
-        border-color: #1e3a5f;
-        background: #f4faff
-
-
+            border-color: #1e3a5f;
+            background: #f4faff;
         }
+
         #back-to-main-from-section:hover,
         #back-to-main-from-diploma:hover,
         #back-to-main-from-final:hover {
-        background: #f4faff;
+            background: #f4faff;
         }
 
         #back-to-main-from-section,
         #back-to-main-from-diploma,
         #back-to-main-from-final {
-        color: #1e3a5f;
+            color: #1e3a5f;
         }
-       
-        /* Адаптация для мобильных устройств */
+
+        /* ========== АДАПТАЦИЯ ДЛЯ МОБИЛЬНЫХ ========== */
         @media (max-width: 600px) {
-        body {
-        font-size: 12px; /* базовый размер шрифта для всех элементов */
-        }
+            body {
+                font-size: 12px;
+            }
 
-        #app {
-        padding: 10px;
-        border-width: 3px;
-        }
+            #app {
+                padding: 10px;
+                border-width: 3px;
+            }
 
-        .logo {
-        width: 130px;
-        height: 130px;
-        margin-bottom: 10px;
-        }
+            .logo {
+                width: 180px;
+                height: 180px;
+                margin-bottom: 10px;
+            }
 
-        h1, h2, h3 {
-        font-size: 1.3rem;
-        border-bottom-width: 2px;
-        }
+            h1, h2, h3 {
+                font-size: 1.3rem;
+                border-bottom-width: 2px;
+            }
 
-        .student-name {
-        font-size: 1rem;
-        padding: 6px 10px;
-        flex-wrap: wrap;
-        gap: 5px;
-        }
+            .student-name {
+                font-size: 1rem;
+                padding: 6px 10px;
+                flex-wrap: wrap;
+                gap: 5px;
+            }
 
-        .student-name input {
-        padding: 5px 8px;
-        font-size: 0.85rem;
-        }
+            .student-name input {
+                padding: 5px 8px;
+                font-size: 0.85rem;
+            }
 
-        table {
-        font-size: 0.7rem; /* уменьшаем шрифт таблицы */
-        margin: 10px 0;
-        }
+            table {
+                font-size: 0.7rem;
+                margin: 10px 0;
+            }
 
-        th, td {
-        padding: 6px 4px;
-        word-break: break-word; /* разрешаем перенос длинных слов */
-        line-height: 1.2;
-        }
+            th, td {
+                padding: 6px 4px;
+                word-break: break-word;
+                line-height: 1.2;
+            }
 
-    /* уменьшаем подзаголовки в таблице */
-        .subject-sub {
-        font-size: 0.7em;
-        margin-top: 2px;
-        }
+            /* Ячейки со статусом зачёта — без переноса */
+            td[id^="status-"] {
+                font-size: 0.6rem;
+                white-space: nowrap;
+                padding-left: 2px;
+                padding-right: 2px;
+            }
 
-        .diploma-link {
-        font-size: 1rem;
-        padding: 10px;
-        border-width: 3px;
-        }
+            .subject-sub {
+                font-size: 0.7em;
+                margin-top: 2px;
+            }
 
-       .annotation {
-        padding: 12px;
-        font-size: 0.85rem;
-        border-width: 2px;
-       }
+            .diploma-link {
+                font-size: 1rem;
+                padding: 10px;
+                border-width: 3px;
+            }
 
-       .section-content {
-        padding: 15px;
-       }
+            .annotation {
+                padding: 12px;
+                font-size: 0.85rem;
+                border-width: 2px;
+            }
 
-       .options li {
-        padding: 6px 10px;
-        font-size: 0.85rem;
-       }
+            .section-content {
+                padding: 15px;
+            }
 
-       button {
-        padding: 8px 16px;
-        font-size: 0.9rem;
-        margin-right: 8px;
-       }
+            .options li {
+                padding: 6px 10px;
+                font-size: 0.85rem;
+            }
 
-       .diploma-text {
-        padding: 20px 12px;
-        font-size: 1rem;
-       }
+            button {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+                margin-right: 8px;
+            }
 
-    /* дополнительное уменьшение для очень маленьких экранов */
-       @media (max-width: 400px) {
-        body {
-            font-size: 11px;
-        }
-        .logo {
-            width: 100px;
-            height: 100px;
-        }
-        table {
-            font-size: 0.65rem;
-        }
-        td {
-            padding: 4px 2px;
-        }
-        .student-name {
-            flex-direction: column;
-            align-items: stretch;
-        }
-        .student-name span {
-            text-align: center;
-        }
-        .diploma-link {
-            font-size: 0.9rem;
-            padding: 8px;
-        }
-       }
-        }
+            .diploma-text {
+                padding: 20px 12px;
+                font-size: 1rem;
+            }
 
-        
+            /* Сверхмалые экраны */
+            @media (max-width: 400px) {
+                body {
+                    font-size: 11px;
+                }
+                .logo {
+                    width: 150px;
+                    height: 150px;
+                }
+                table {
+                    font-size: 0.65rem;
+                }
+                td {
+                    padding: 4px 2px;
+                }
+                td[id^="status-"] {
+                    font-size: 0.55rem;
+                }
+                .student-name {
+                    flex-direction: column;
+                    align-items: stretch;
+                }
+                .student-name span {
+                    text-align: center;
+                }
+                .diploma-link {
+                    font-size: 0.9rem;
+                    padding: 8px;
+                }
+            }
+        }
     </style>
 </head>
 <body>
@@ -571,7 +569,6 @@
 
         <div class="student-name">
             <span>Зачетка</span>
-            <!-- Убрано value="Посетитель" -->
             <input type="text" id="student-name-input" placeholder="Введите ваше имя">
         </div>
 
@@ -625,14 +622,13 @@
         </div>
     </div>
 
-    <!-- ЭКРАН ДИПЛОМА (без печати, с новыми стилями) -->
+    <!-- ЭКРАН ДИПЛОМА -->
     <div id="diploma-screen" class="screen">
         <h2>ДИПЛОМ</h2>
         <div id="diploma-content" class="diploma-text">
             <p>Настоящий диплом удостоверяет, что <span class="diploma-name" id="diploma-name">Посетитель</span> побывал(а) на выставке «Ни дня без кадра и строчки: петербургская школа журналистики», посвященной 80-летию журналистского образования в СПбГУ, и теперь знает, как непросто стать настоящим журналистом.</p>
             <p>Поздравляем! Нас порадовали твои ответы на вопросы зачета! Из тебя получился бы отличный <span class="diploma-specialization" id="diploma-specialization">Журналист</span>!</p>
             <p>Не забудь получить открытку со своей специализацией на выходе с выставки!</p>
-            <!-- Печать удалена -->
         </div>
         <div style="text-align: center;">
             <button id="back-to-main-from-diploma">На главную</button>
